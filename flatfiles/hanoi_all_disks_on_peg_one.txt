@@ -49,9 +49,6 @@ fact: (top disk1 peg1)
 fact: (empty peg2)
 fact: (empty peg3)
 
-fact: (movable disk1 peg1 peg2)
-fact: (movable disk1 peg1 peg3)
-
 rule: ((larger ?X ?Y)(larger ?Y ?Z)) -> (larger ?X ?Z)
 rule: ((top ?X ?Y)(empty ?Z)) -> (movable ?X ?Y ?Z)
 rule: ((top ?X ?Y)(top ?Z ?W)(larger ?Z ?X)) -> (movable ?X ?Y ?W)

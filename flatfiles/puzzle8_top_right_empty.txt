@@ -31,10 +31,6 @@ fact: (posn tile7 pos1 pos3)
 fact: (posn tile8 pos3 pos2)
 fact: (posn empty pos3 pos1)
 
-fact: (movable tile8 pos3 pos2 pos3 pos1)
-fact: (movable tile4 pos2 pos1 pos3 pos1)
-
-"""
 
 rule: ((posn ?A ?Y pos2)(posn ?B ?Y ?W)) -> (adjacent ?A ?B)
 rule: ((posn ?A ?Y ?W)(posn ?B ?Y pos2)) -> (adjacent ?A ?B)
@@ -44,4 +40,3 @@ rule: ((posn ?A ?Y ?Z)(posn ?B pos2 ?Z)) -> (adjacent ?A ?B)
 rule: ((adjacent ?A ?B)) -> (adjacent ?B ?A)
 
 rule: ((adjacent ?A empty)(posn ?A ?X ?Y)(posn empty ?Z ?W) -> (movable ?A ?X ?Y ?Z ?W)
-"""
